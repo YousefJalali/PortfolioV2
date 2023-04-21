@@ -2,26 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer base {
+  html,
+  body {
+    @apply md:snap-y md:snap-mandatory text-neutral scroll-smooth selection:bg-primary selection:text-primary-content caret-primary;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer components {
+  .byline {
+    @apply font-mono text-primary text-sm md:text-base;
+  }
+
+  .btn {
+    @apply inline-block relative hover:bg-primary hover:border-primary hover:text-primary-content hover:after:bottom-0 hover:after:right-0 after:block after:absolute after:w-[calc(100%+4px)] after:h-[calc(100%+4px)] after:-bottom-2 after:-right-2 after:-z-10 after:bg-primary no-underline bg-base-100 font-bold text-neutral px-8 py-3 border-4 border-neutral after:transition-all transition-all hover:cursor-pointer select-none text-base leading-none;
+  }
+  /* .btn {
+    @apply relative hover:before:top-0 hover:before:left-0 before:block before:absolute before:w-[calc(100%+4px)] before:h-[calc(100%+4px)] before:-top-2 before:-left-2 before:-z-10 before:bg-primary no-underline bg-transparent font-bold text-primary-content px-8 py-3 border-4 border-neutral before:transition-all transition-all hover:scale-90 hover:cursor-pointer select-none text-base leading-none;
+  } */
+
+  .section-title {
+    @apply text-2xl md:text-6xl font-black mb-2 md:mb-6;
+  }
 }
