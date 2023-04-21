@@ -1,4 +1,4 @@
-// import vrbtm from '../assets/vrbtm.png'
+// import vrbtm from '../assets/VRBTM.png'
 // import planner from '../assets/the_planner.png'
 // import weatherApp from '../assets/WeatherApp.png'
 
@@ -8,7 +8,7 @@ export const projectsData = [
     title: 'VRBTM',
     description:
       'Introducing a web app to improve memory retention. Easily memorize text by omitting words manually or randomly. Create personal notebooks and modify them. Save flashcards based on your notes and more.',
-    img: '/vrbtm.png',
+    img: '/VRBTM.png',
     usedTechs: 'Next.js, Tailwind & MongoDB',
     links: {
       github: 'https://github.com/YousefJalali/vrbtm',
