@@ -1,5 +1,5 @@
 import Technologies from '../technologies/Technologies'
-import profilePic from '../../assets/profile.jpeg'
+// import profilePic from '../../assets/profile.jpeg'
 import Image from 'next/image'
 
 export default function About() {
@@ -45,7 +45,7 @@ export default function About() {
 
         <div className='h-full w-1/3 relative hidden md:block'>
           <Image
-            src={profilePic}
+            src='/profile.jpeg'
             alt='profile'
             className='object-cover h-full relative z-10 hover:translate-x-4 hover:translate-y-4 transition-all'
             width={1600}

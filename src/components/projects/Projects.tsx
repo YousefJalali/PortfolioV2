@@ -104,7 +104,7 @@ export default function Projects() {
                     className='h-full w-screen md:w-[60vw] lg:w-[50vw] px-6'
                   >
                     <Image
-                      src={(project.img as StaticImageData).src}
+                      src={project.img}
                       alt={project.title}
                       width={1180}
                       height={818}
@@ -138,7 +138,7 @@ export default function Projects() {
               className='mb-12 md:mb-0 w-[calc(100vw-4.5rem)] overflow-hidden md:w-1/2 max-w-none z-20 bg-base-200 shadow-2xl'
             >
               <Image
-                src={(project.img as StaticImageData).src}
+                src={project.img}
                 alt={project.title}
                 width={1180}
                 height={818}
