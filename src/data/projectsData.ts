@@ -40,3 +40,5 @@ export const projectsData = [
     },
   },
 ]
+
+export type ProjectType = typeof projectsData[0]

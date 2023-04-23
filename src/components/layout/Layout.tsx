@@ -15,7 +15,7 @@ export default function Layout({ children }: { children: ReactNode }) {
         <span>github</span>
       </aside> */}
 
-      <main className='relative z-10 [&>section]:lg:px-40 [&>section]:snap-center [&>section]:snap-always'>
+      <main className='relative z-10 [&_.section]:lg:px-40 [&_.section]:snap-center [&_.section]:snap-always'>
         <Header />
 
         {children}

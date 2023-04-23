@@ -36,7 +36,7 @@ export default function Home() {
     // 4rem header height
     <section
       id='home'
-      className='px-6 h-[calc(100vh-4rem)] flex flex-col justify-center'
+      className='section px-6 h-[calc(100vh-4rem)] flex flex-col justify-center'
     >
       {/* <Background /> */}
       <div className=''>
