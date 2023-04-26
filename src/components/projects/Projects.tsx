@@ -1,5 +1,5 @@
 import { projectsData } from '@/data'
-import { useInView } from 'framer-motion'
+import { useInView, useScroll } from 'framer-motion'
 import { useRef } from 'react'
 import { useMedia } from '@/libs/hooks'
 import ProjectDescription from './ProjectDescription'
@@ -10,6 +10,10 @@ export default function Projects() {
   const isInView = useInView(sectionRef, { once: true })
 
   const isMobile = useMedia('(max-width: 768px)')
+
+  const { scrollYProgress } = useScroll({
+    container: sectionRef,
+  })
 
   return (
     <>
@@ -34,7 +38,12 @@ export default function Projects() {
         id={isMobile ? undefined : 'projects'}
         className='section flex gap-6 md:block px-6 w-screen relative overflow-x-scroll md:overflow-x-hidden md:overflow-y-scroll h-screen snap-x snap-mandatory [&>article]:snap-center [&>article]:snap-always md:snap-y'
       >
-        {!isMobile && <ProjectShowcase projectsData={projectsData} />}
+        {!isMobile && (
+          <ProjectShowcase
+            scrollYProgress={scrollYProgress}
+            projectsData={projectsData}
+          />
+        )}
 
         {projectsData.map((project, i, arr) => (
           <ProjectDescription key={project.title} project={project} />

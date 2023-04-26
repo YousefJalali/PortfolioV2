@@ -1,7 +1,7 @@
 import {
+  MotionValue,
   motion,
   useInView,
-  useScroll,
   useSpring,
   useTransform,
 } from 'framer-motion'
@@ -11,8 +11,10 @@ import { ProjectType } from '@/data'
 
 export default function ProjectShowcase({
   projectsData,
+  scrollYProgress,
 }: {
   projectsData: ProjectType[]
+  scrollYProgress: MotionValue<number>
 }) {
   const [imgContainerWidth, setImgContainerWidth] = useState(500)
 
@@ -27,10 +29,6 @@ export default function ProjectShowcase({
       )
     }
   }, [])
-
-  const { scrollYProgress } = useScroll({
-    container: sectionRef,
-  })
 
   const x = useTransform(
     scrollYProgress,
