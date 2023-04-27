@@ -20,7 +20,7 @@ export default function Pagination() {
   )
 
   return (
-    <div className='mb-6 mr-6 md:mb-12 md:mr-12 relative'>
+    <div className='mb-6 mr-6 relative'>
       <div className='sticky bottom-0 text-[48px] h-[48px] md:text-[96px] md:h-[96px] right-0 flex font-bold font-mono leading-none overflow-hidden'>
         <span ref={numberRef}>0</span>
         <motion.span className='flex flex-col items-center' style={{ y }}>

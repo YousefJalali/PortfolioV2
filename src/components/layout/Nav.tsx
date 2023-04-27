@@ -12,7 +12,9 @@ function accumulateArray(arr: number[]) {
 }
 
 export default function Nav() {
-  const [childrenWidth, setChildrenWidth] = useState<number[]>([0, 77, 78, 94])
+  const [childrenWidth, setChildrenWidth] = useState<number[]>(
+    new Array(sectionList.length).fill(0)
+  )
   const { scrollYProgress } = useScroll()
 
   const navRef = useRef<HTMLUListElement>(null)
@@ -20,12 +22,24 @@ export default function Nav() {
     if (navRef.current) {
       const children = navRef.current.children
       let arr: number[] = []
+
+      let offsetWidth = []
+      let scrollWidth = []
+      let clientWidth = []
       for (let i = 0; i < children.length; i++) {
+        offsetWidth.push((children[i] as HTMLLIElement).offsetWidth)
+        scrollWidth.push((children[i] as HTMLLIElement).scrollWidth)
+        clientWidth.push((children[i] as HTMLLIElement).clientWidth)
+
         arr.push((children[i] as HTMLLIElement).offsetWidth)
       }
       arr.pop()
       arr.unshift(0)
       setChildrenWidth([...arr])
+
+      console.log('offsetWidth', offsetWidth)
+      console.log('scrollWidth', scrollWidth)
+      console.log('clientWidth', clientWidth)
     }
   }, [])
 
@@ -72,14 +86,14 @@ export default function Nav() {
 
   return (
     <nav className='items-center relative hidden lg:flex'>
-      <motion.div
+      {/* <motion.div
         className='absolute -bottom-1 left-0 h-1 w-[19.2px] bg-primary'
         style={{ x }}
         variants={{ visible: { opacity: 1 }, hidden: { opacity: 0 } }}
         initial='hidden'
         animate='visible'
         transition={{ delay: 0.25 }}
-      />
+      /> */}
       <motion.ul
         ref={navRef}
         className='flex gap-[32px]'

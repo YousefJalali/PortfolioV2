@@ -8,14 +8,12 @@ const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira' })
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
-    <div
-      className={`${inter.variable} ${firaCode.variable} font-sans h-screen pb-0`}
-    >
+    <div className={`${inter.variable} ${firaCode.variable} font-sans`}>
       {/* <aside className='fixed top-0 left-0 w-40 h-full flex justify-center items-end'>
         <span>github</span>
       </aside> */}
 
-      <main className='relative z-10 [&_.section]:lg:px-40 [&_.section]:snap-center [&_.section]:snap-always'>
+      <main className='relative'>
         <Header />
 
         {children}
@@ -25,9 +23,9 @@ export default function Layout({ children }: { children: ReactNode }) {
         </footer>
       </main>
 
-      <aside className='hidden md:flex fixed top-0 right-0 w-40 h-full justify-end items-end -z-1'>
+      {/* <aside className='hidden md:flex fixed top-0 right-0 w-40 h-full justify-end items-end -z-1'>
         <Pagination />
-      </aside>
+      </aside> */}
     </div>
   )
 }

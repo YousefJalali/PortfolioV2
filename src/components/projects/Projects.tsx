@@ -36,7 +36,7 @@ export default function Projects() {
       <section
         ref={sectionRef}
         id={isMobile ? undefined : 'projects'}
-        className='section flex gap-6 md:block px-6 w-screen relative overflow-x-scroll md:overflow-x-hidden md:overflow-y-scroll h-screen snap-x snap-mandatory [&>article]:snap-center [&>article]:snap-always md:snap-y'
+        className='section max-w-none [&>article]:max-w-7xl [&>article]:mx-auto flex gap-6 md:block px-6 w-screen relative overflow-x-scroll md:overflow-x-hidden md:overflow-y-scroll h-screen snap-x snap-mandatory [&>article]:snap-center [&>article]:snap-always md:snap-y '
       >
         {!isMobile && (
           <ProjectShowcase

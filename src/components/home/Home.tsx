@@ -34,14 +34,11 @@ export default function Home() {
 
   return (
     // 4rem header height
-    <section
-      id='home'
-      className='section px-6 h-[calc(100vh-4rem)] flex flex-col justify-center'
-    >
+    <section id='home' className='section min-h-screen'>
       {/* <Background /> */}
-      <div className=''>
+      <div>
         <motion.div
-          className='w-full prose md:prose-2xl prose-p:text-base prose-h1:mb-0 prose-h2:my-3 md:prose-h2:my-4 max-w-none'
+          className='w-full prose prose-sm md:prose-base max-w-none md:prose-h1:text-7xl prose-h1:mb-2 prose-p:m-0'
           variants={container}
           initial='hidden'
           animate='visible'
@@ -49,18 +46,13 @@ export default function Home() {
           <motion.span className='byline block' variants={child}>
             Hi, my name is
           </motion.span>
-          {/* <SlideText>
-            <motion.span className='byline block'>Hi, my name is</motion.span>
-          </SlideText> */}
 
           {/* <WavyText>Yousef Jalali.</WavyText> */}
-          {/* <motion.h1 variants={child}>
-            <WavyText>Yousef Jalali.</WavyText>
-          </motion.h1> */}
           <motion.h1 variants={child}>Yousef Jalali.</motion.h1>
 
-          <motion.h2 variants={child}>I build things for the web.</motion.h2>
-          <motion.p className='md:w-2/3 py-2 md:py-4' variants={child}>
+          <motion.h1 variants={child}>I build things for the web.</motion.h1>
+
+          <motion.p className='py-2 md:py-4 max-w-xl' variants={child}>
             I&apos;m a software engineer who loves crafting amazing digital
             experiences. From time to time, I even dip my toes into the design
             side of things. It&apos;s my passion to build exceptional digital
@@ -69,7 +61,7 @@ export default function Home() {
 
           <motion.div variants={child}>
             {/* <Button href='#about'>About me</Button> */}
-            <a href='#about' className='btn'>
+            <a href='#about' className='btn mt-4'>
               About me
             </a>
           </motion.div>

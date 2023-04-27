@@ -3,12 +3,12 @@ import chroma from 'chroma-js'
 
 export default function Technologies() {
   return (
-    <ul className='mt-4 py-1 px-6 flex md:flex-wrap gap-4 overflow-x-scroll w-full'>
+    <ul className='mt-4 py-1 flex flex-wrap gap-3 md:gap-4 w-full'>
       {paths.map(({ name, color, path, link }) => {
         return (
           <li
             key={name}
-            className='h-fit w-fit transition-all color-accent ring hover:ring-2 rounded-lg hover:ring-offset-2 hover:cursor-pointer'
+            className='h-fit w-fit transition-all color-accent ring-2 hover:ring-2 rounded-lg hover:ring-offset-2 hover:cursor-pointer'
             style={{
               color: `${chroma(color)
                 .set('hsv.s', '*0.9')
@@ -22,7 +22,7 @@ export default function Technologies() {
               href={link}
               target='_blank'
               rel='noopener noreferrer'
-              className='whitespace-nowrap [&>svg]:h-4 flex gap-2 items-center w-fit px-2 py-1 text-sm font-mono'
+              className='whitespace-nowrap [&>svg]:h-4 flex gap-2 items-center w-fit px-2 py-1 text-xs md:text-sm font-mono'
             >
               <svg
                 role='img'

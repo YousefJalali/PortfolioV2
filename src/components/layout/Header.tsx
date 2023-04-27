@@ -8,7 +8,7 @@ export default function Header() {
 
   return (
     <>
-      <header className='w-full h-16 md:h-20 bg-base-100 flex p-6 justify-between items-center sticky left-0 top-0 z-50'>
+      <header className='w-full h-16 md:h-20 bg-gradient-to-b from-base-100 to-transparent flex p-6 md:p-12 justify-between items-center fixed left-0 top-0 z-50'>
         <Logo />
         <Nav />
 
