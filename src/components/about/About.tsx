@@ -4,7 +4,10 @@ import Image from 'next/image'
 
 export default function About() {
   return (
-    <section id='about' className='section md:justify-center md:flex-row'>
+    <section
+      id='about'
+      className='section md:justify-center md:flex-row mb-32 md:mb-0'
+    >
       <div className='flex h-fit gap-12'>
         <div className='flex-1 overflow-hidden'>
           <div className='prose prose-sm md:prose-base max-w-none'>
