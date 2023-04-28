@@ -3,7 +3,7 @@ import Image from 'next/image'
 
 export default function Projects2() {
   return (
-    <section className='section prose'>
+    <section id='projects' className='section prose pt-32'>
       <span className='byline'>Projects</span>
       <h1>Some Things I’ve Built.</h1>
 
@@ -11,14 +11,16 @@ export default function Projects2() {
         {projectsData.map((project, i) => (
           <article
             key={project.title}
-            className={`md:shadow-none shadow-2xl flex flex-col-reverse justify-center items-center ${
+            className={`group md:shadow-none shadow-2xl flex flex-col-reverse justify-center items-center ${
               i % 2 === 0 ? 'md:flex-row-reverse' : 'md:flex-row'
             }`}
           >
             <div
               className={`prose prose-sm md:prose-md w-fit md:shadow-2xl bg-base-200 z-10 p-4 md:p-6 ${
-                i % 2 === 0 ? 'md:-ml-12' : 'md:-mr-12'
-              }`}
+                i % 2 === 0
+                  ? 'md:-ml-32 md:group-hover:-ml-0 md:group-hover:-mr-32'
+                  : 'md:-mr-32 md:group-hover:-mr-0 md:group-hover:-ml-32'
+              } transition-all ease-in`}
             >
               <span className='byline text-xs'>{project.usedTechs}</span>
               <h1 className='mb-0'>{project.title}</h1>

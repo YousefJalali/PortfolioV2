@@ -6,7 +6,7 @@ export default function About() {
   return (
     <section
       id='about'
-      className='section md:justify-center md:flex-row mb-32 md:mb-0'
+      className='section md:justify-center items-center md:flex-row'
     >
       <div className='flex h-fit gap-12'>
         <div className='flex-1 overflow-hidden'>
