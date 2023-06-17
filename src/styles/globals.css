@@ -5,7 +5,7 @@
 @layer base {
   html,
   body {
-    @apply text-neutral scroll-smooth selection:bg-primary selection:text-primary-content caret-primary;
+    @apply text-neutral selection:bg-primary selection:text-primary-content caret-primary;
     /* @apply md:snap-y md:snap-mandatory text-neutral scroll-smooth selection:bg-primary selection:text-primary-content caret-primary; */
   }
 }

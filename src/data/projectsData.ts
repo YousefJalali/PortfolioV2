@@ -17,7 +17,7 @@ export const projectsData = [
   },
   {
     status: 'Featured Project',
-    title: 'The Planner',
+    title: 'Binder',
     description:
       "This app lets you create tasks, assign them to projects, set due dates, prioritize your work, and organize them into categories. You'll receive notifications and reminders, and can mark tasks as completed. It's accessible on multiple devices for managing your tasks and projects from anywhere.",
     img: '/the_planner.png',

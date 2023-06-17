@@ -34,8 +34,10 @@ export default function Home() {
 
   return (
     // 4rem header height
-    <section id='home' className='section min-h-screen'>
+    <div id='home' className='flex-row max-w-none m-0 p-0'>
       {/* <Background /> */}
+      {/* <div className='bg-primary w-3/4 h-3/4'></div>
+      <div className='bg-secondary flex-1 h-full'></div> */}
       <div>
         <motion.div
           className='w-full prose prose-sm md:prose-base max-w-none md:prose-h1:text-7xl prose-h1:mb-2 prose-p:m-0'
@@ -47,7 +49,6 @@ export default function Home() {
             Hi, my name is
           </motion.span>
 
-          {/* <WavyText>Yousef Jalali.</WavyText> */}
           <motion.h1 variants={child}>Yousef Jalali.</motion.h1>
 
           <motion.h1 variants={child}>I build things for the web.</motion.h1>
@@ -60,15 +61,12 @@ export default function Home() {
           </motion.p>
 
           <motion.div variants={child}>
-            {/* <Button href='#about'>About me</Button> */}
             <a href='#about' className='btn mt-4'>
               About me
             </a>
           </motion.div>
         </motion.div>
-
-        {/* <div className='w-80 border'>illustration</div> */}
       </div>
-    </section>
+    </div>
   )
 }
