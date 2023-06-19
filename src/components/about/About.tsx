@@ -3,15 +3,18 @@ import Technologies from '../technologies/Technologies'
 import Image from 'next/image'
 
 export default function About() {
+  const diff = new Date().getTime() - new Date('1992-10-19').getTime()
+  const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25))
+
   return (
-    <div id='about' className='md:justify-center items-center md:flex-row'>
+    <div className='md:justify-center items-center md:flex-row'>
       <div className='flex h-fit gap-12'>
         <div className='flex-1 overflow-hidden'>
           <div className='prose prose-sm md:prose-base max-w-none'>
             <span className='byline'>About me</span>
             <h1>Hello again,</h1>
             <p>
-              I’m Yousef, a 30-year-old Javascript Developer passionate about
+              I’m Yousef, a {age}-year-old Javascript Developer passionate about
               web development, particularly HTML, CSS, and JS. Although I’m
               currently working in the oil and gas industry, my true passion
               lies in web development. Ever since 2018, I’ve been dedicating my

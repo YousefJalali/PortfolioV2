@@ -17,10 +17,7 @@ export default function Projects() {
 
   return (
     <>
-      <div
-        id={isMobile ? 'projects' : undefined}
-        className='px-6 mb-6 pt-16 md:hidden'
-      >
+      <div className='px-6 mb-6 pt-16 md:hidden'>
         <span className='byline text-sm md:text-base'>Projects</span>
         <h1
           style={{
@@ -33,10 +30,10 @@ export default function Projects() {
           Some Things I’ve Built.
         </h1>
       </div>
-      <section
+      <div
         ref={sectionRef}
         id={isMobile ? undefined : 'projects'}
-        className='section max-w-none [&>article]:max-w-7xl [&>article]:mx-auto flex gap-6 md:block px-6 w-screen relative overflow-x-scroll md:overflow-x-hidden md:overflow-y-scroll h-screen snap-x snap-mandatory [&>article]:snap-center [&>article]:snap-always md:snap-y '
+        className='max-w-none [&>article]:max-w-7xl [&>article]:mx-auto flex gap-6 md:block px-6 w-screen relative overflow-x-scroll md:overflow-x-hidden md:overflow-y-scroll h-screen snap-x snap-mandatory [&>article]:snap-center [&>article]:snap-always md:snap-y '
       >
         {!isMobile && (
           <ProjectShowcase
@@ -48,7 +45,7 @@ export default function Projects() {
         {projectsData.map((project, i, arr) => (
           <ProjectDescription key={project.title} project={project} />
         ))}
-      </section>
+      </div>
     </>
   )
 }

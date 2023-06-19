@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     // 4rem header height
-    <div id='home' className='flex-row max-w-none m-0 p-0'>
+    <div className='flex-row max-w-none m-0 p-0'>
       {/* <Background /> */}
       {/* <div className='bg-primary w-3/4 h-3/4'></div>
       <div className='bg-secondary flex-1 h-full'></div> */}
