@@ -1,4 +1,4 @@
-import { sectionList } from '@/data'
+import { sections } from '@/utils'
 import { Variants, motion, useScroll, useTransform } from 'framer-motion'
 import { useEffect, useRef, useState } from 'react'
 
@@ -13,7 +13,7 @@ function accumulateArray(arr: number[]) {
 
 export default function Nav() {
   const [childrenWidth, setChildrenWidth] = useState<number[]>(
-    new Array(sectionList.length).fill(0)
+    new Array(sections.length).fill(0)
   )
   const { scrollYProgress } = useScroll()
 
@@ -39,7 +39,7 @@ export default function Nav() {
     }
   }, [])
 
-  const pagesOffset = sectionList.map((_, i, arr) =>
+  const pagesOffset = sections.map((_, i, arr) =>
     i === 0 ? 0 : i / (arr.length - 1)
   )
 
@@ -81,7 +81,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className='items-center relative hidden lg:flex'>
+    <nav className='relative hidden items-center lg:flex'>
       {/* <motion.div
         className='absolute -bottom-1 left-0 h-1 w-[19.2px] bg-primary'
         style={{ x }}
@@ -97,10 +97,10 @@ export default function Nav() {
         initial='hidden'
         animate='visible'
       >
-        {sectionList.map((item, i) => (
+        {sections.map((item, i) => (
           <motion.li key={item} variants={child}>
             <a
-              className='flex gap-1 hover:text-primary transition-all'
+              className='flex gap-1 transition-all hover:text-primary'
               href={`#${item.toLowerCase()}`}
             >
               <span className='byline'>0{i + 1}.</span>

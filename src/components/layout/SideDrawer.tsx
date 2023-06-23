@@ -1,4 +1,4 @@
-import { sectionList } from '@/data'
+import { sections } from '@/utils'
 import { Variants, motion } from 'framer-motion'
 import { Dispatch, SetStateAction, useEffect, useState } from 'react'
 
@@ -57,17 +57,17 @@ export default function SideDrawer({
   }
 
   return (
-    <div className='fixed top-0 left-0 h-screen w-screen z-40 bg-base-100'>
+    <div className='fixed left-0 top-0 z-40 h-screen w-screen bg-base-100'>
       <motion.ul
-        className='flex flex-col gap-12 h-full justify-center items-center'
+        className='flex h-full flex-col items-center justify-center gap-12'
         variants={container}
         initial='hidden'
         animate='visible'
       >
-        {sectionList.map((item, i) => (
+        {sections.map((item, i) => (
           <motion.li key={item} variants={child}>
             <a
-              className={`flex gap-1 hover:text-primary transition-all text-3xl font-bold ${
+              className={`flex gap-1 text-3xl font-bold transition-all hover:text-primary ${
                 hash === item.toLowerCase() ? 'text-primary' : ''
               }`}
               href={`#${item.toLowerCase()}`}
