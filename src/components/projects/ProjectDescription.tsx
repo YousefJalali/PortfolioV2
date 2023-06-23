@@ -1,20 +1,15 @@
 import { ProjectType } from '@/data'
-import { useInView } from 'framer-motion'
 import Image from 'next/image'
-import { useRef } from 'react'
 
 export default function ProjectDescription({
   project,
 }: {
   project: ProjectType
 }) {
-  // const sectionRef = useRef<HTMLDivElement>(null)
-  // const isInView = useInView(sectionRef, { once: true })
-
   return (
     <article
       key={project.title}
-      className='mb-12 md:mb-0 w-full max-w-none z-20 bg-base-200 shadow-2xl'
+      className='mb-12 md:mb-0 w-full z-20 bg-base-200 md:bg-transparent'
     >
       <Image
         src={project.img}
@@ -23,14 +18,16 @@ export default function ProjectDescription({
         height={818}
         className='px-4 w-full max-w-md object-contain md:hidden mx-auto bg-base-300'
       />
-      <div className='p-4 md:p-6 prose prose-sm md:prose-md'>
+      <div className='p-4 md:p-0 prose prose-sm max-w-none md:prose-md flex flex-col md:text-right md:justify-end md:items-end'>
         <span className='byline text-xs'>{project.usedTechs}</span>
-        {/* <span className='byline'>{project.status}</span> */}
+
         <h1 className='mb-0'>{project.title}</h1>
-        <p className='my-3'>{project.description}</p>
+        <p className='my-4 bg-base-200 md:shadow-md md:p-6 md:w-[120%]'>
+          {project.description}
+        </p>
 
         {/* links */}
-        <div className='mt-4 [&>a>svg]:h-5 [&>a]:text-neutral flex gap-4 hover:[&>a>svg]:stroke-primary [&>a>svg]:hover:cursor-pointer transition-all'>
+        <div className='mt-4 [&>a>svg]:h-5 [&>a]:text-neutral flex md:justify-end gap-4 hover:[&>a>svg]:stroke-primary [&>a>svg]:hover:cursor-pointer transition-all'>
           <a
             href={project.links.github}
             target='_blank'

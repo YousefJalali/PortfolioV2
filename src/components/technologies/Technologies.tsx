@@ -3,7 +3,7 @@ import chroma from 'chroma-js'
 
 export default function Technologies() {
   return (
-    <ul className='mt-4 py-1 flex flex-wrap gap-3 md:gap-4 w-full'>
+    <ul className='mt-4 p-1 flex flex-wrap gap-3 md:gap-4 w-full'>
       {paths.map(({ name, color, path, link }) => {
         return (
           <li

@@ -36,10 +36,6 @@ export default function Nav() {
       arr.pop()
       arr.unshift(0)
       setChildrenWidth([...arr])
-
-      console.log('offsetWidth', offsetWidth)
-      console.log('scrollWidth', scrollWidth)
-      console.log('clientWidth', clientWidth)
     }
   }, [])
 

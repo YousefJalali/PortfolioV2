@@ -32,6 +32,13 @@ module.exports = {
       mono: ['var(--font-fira)'],
     },
     extend: {
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+      },
+
       typography: ({ theme }) => ({
         DEFAULT: {
           css: {

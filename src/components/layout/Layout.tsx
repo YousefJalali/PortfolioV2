@@ -15,8 +15,6 @@ export default function Layout({ children }: { children: ReactNode }) {
 
       {children}
 
-      {/* <Header /> */}
-
       {/* <footer className='absolute bottom-0 left-0 w-full h-fit text-center p-12 byline text-neutral'>
           Designed & Built by Yousef Jalali
         </footer> */}

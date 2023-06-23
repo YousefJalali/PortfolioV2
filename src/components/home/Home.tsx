@@ -34,39 +34,35 @@ export default function Home() {
 
   return (
     // 4rem header height
-    <div className='flex-row max-w-none m-0 p-0'>
-      {/* <Background /> */}
-      {/* <div className='bg-primary w-3/4 h-3/4'></div>
-      <div className='bg-secondary flex-1 h-full'></div> */}
-      <div>
-        <motion.div
-          className='w-full prose prose-sm md:prose-base max-w-none md:prose-h1:text-7xl prose-h1:mb-2 prose-p:m-0'
-          variants={container}
-          initial='hidden'
-          animate='visible'
-        >
-          <motion.span className='byline block' variants={child}>
-            Hi, my name is
-          </motion.span>
 
-          <motion.h1 variants={child}>Yousef Jalali.</motion.h1>
+    <motion.div
+      className='prose prose-sm w-full max-w-none md:prose-base prose-h1:mb-2 prose-p:m-0 md:prose-h1:text-7xl'
+      variants={container}
+      initial='hidden'
+      animate='visible'
+    >
+      <motion.span className='byline block' variants={child}>
+        Hi, my name is
+      </motion.span>
 
-          <motion.h1 variants={child}>I build things for the web.</motion.h1>
+      <motion.h1 variants={child}>Yousef Jalali.</motion.h1>
 
-          <motion.p className='py-2 md:py-4 max-w-xl' variants={child}>
-            I&apos;m a software engineer who loves crafting amazing digital
-            experiences. From time to time, I even dip my toes into the design
-            side of things. It&apos;s my passion to build exceptional digital
-            experiences that leave a lasting impression.
-          </motion.p>
+      <motion.h1 variants={child}>I build things for the web.</motion.h1>
 
-          <motion.div variants={child}>
-            <a href='#about' className='btn mt-4'>
-              About me
-            </a>
-          </motion.div>
-        </motion.div>
-      </div>
-    </div>
+      <motion.p className='max-w-3xl py-2 md:py-4' variants={child}>
+        A front end developer with a genuine passion for crafting outstanding
+        digital experiences. <br /> With a strong sense of design and expertise
+        in modern web technologies, I specialize in transforming ideas into
+        visually stunning and user-friendly interfaces. Whether it&apos;s
+        developing responsive layouts or optimizing performance, I am dedicated
+        to delivering top-notch front end solutions that leave a lasting impact.
+      </motion.p>
+
+      {/* <motion.div variants={child}>
+        <a href='#about' className='btn mt-4'>
+          About me
+        </a>
+      </motion.div> */}
+    </motion.div>
   )
 }

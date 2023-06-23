@@ -3,24 +3,23 @@ import Technologies from '../technologies/Technologies'
 import Image from 'next/image'
 
 export default function About() {
-  const diff = new Date().getTime() - new Date('1992-10-19').getTime()
-  const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25))
+  // const diff = new Date().getTime() - new Date('1992-10-19').getTime()
+  // const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25))
 
   return (
-    <div className='md:justify-center items-center md:flex-row'>
-      <div className='flex h-fit gap-12'>
+    <div className='items-center md:flex-row md:justify-center'>
+      <div className='flex h-fit gap-12 md:items-center lg:gap-24 xl:gap-32'>
         <div className='flex-1 overflow-hidden'>
-          <div className='prose prose-sm md:prose-base max-w-none'>
+          <div className='prose prose-sm max-w-none md:prose-base'>
             <span className='byline'>About me</span>
             <h1>Hello again,</h1>
             <p>
-              I’m Yousef, a {age}-year-old Javascript Developer passionate about
-              web development, particularly HTML, CSS, and JS. Although I’m
-              currently working in the oil and gas industry, my true passion
-              lies in web development. Ever since 2018, I’ve been dedicating my
-              evenings and weekends to learning as much as I can about these
-              technologies. I find it incredibly rewarding to see my knowledge
-              grow and my projects come to life.
+              My name is Yousef and I enjoy creating things that live on the
+              internet. Although I’m currently working in the oil and gas
+              industry, my true passion lies in web development. Ever since
+              2018, I’ve been dedicating my evenings and weekends to learning as
+              much as I can about these technologies. I find it incredibly
+              rewarding to see my knowledge grow and my projects come to life.
             </p>
             <p>
               My goal is to become a full-time web developer, and I believe that
@@ -35,15 +34,15 @@ export default function About() {
           <Technologies />
         </div>
 
-        <div className='w-1/3 relative hidden md:block'>
-          <Image
-            src='/profile.jpeg'
+        <div className='relative hidden w-1/3 md:block'>
+          <img
+            src='https://placehold.co/800x1200'
             alt='profile'
-            className='object-cover h-full relative z-10 hover:translate-x-4 hover:translate-y-4 transition-all'
-            width={1600}
-            height={1069}
+            className='relative z-10 h-full object-cover'
+            width={800}
+            height={1200}
           />
-          <div className='border-4 absolute top-4 left-4 w-full h-full border-neutral' />
+          <div className='absolute -left-4 -top-4 z-10 h-full w-full border-4 border-neutral' />
         </div>
       </div>
     </div>
