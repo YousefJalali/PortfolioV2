@@ -28,7 +28,6 @@ export default function handler(
         html: `<p>${req.body.message} <br/> ${req.body.email}</p>`,
       },
       (err, info) => {
-        console.log({ err }, { info })
         if (err) {
           return res.status(404).json({
             //@ts-ignore

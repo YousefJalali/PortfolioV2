@@ -26,6 +26,10 @@ const App = () => {
 
     gsap.registerPlugin(ScrollTrigger)
 
+    gsap.config({
+      nullTargetWarn: false,
+    })
+
     let pagination: HTMLElement[] = gsap.utils.toArray('.pagination')
     let navLinks: HTMLElement[] = gsap.utils.toArray('.nav-link')
     let currentIndex = 0
