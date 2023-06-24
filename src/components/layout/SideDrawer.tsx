@@ -20,26 +20,32 @@ export default function SideDrawer() {
         <span className='block h-[2px] w-8 translate-x-[0.75rem] transform bg-neutral' />
       </label>
 
-      <nav className='fixed right-0 top-0 flex h-screen w-screen translate-x-full transform items-center justify-center bg-neutral shadow-xl transition duration-700 ease-in-out peer-checked:translate-x-0 md:w-1/4'>
-        <ul className='relative z-10 space-y-16 text-center text-4xl font-semibold text-base-100'>
-          {sections.map((section, i) => (
-            <li key={section}>
-              <label
-                id={`nav-${section}`}
-                htmlFor='nav'
-                className='nav-link group/li cursor-pointer select-none gap-2 transition-all hover:text-base-200'
-              >
-                <span className='byline block text-xl text-accent'>
-                  .0{i + 1}
-                </span>
-                <span className='relative inline-block w-fit capitalize after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transform after:bg-base-100 after:transition-all after:content-[""] group-hover/li:after:scale-x-100'>
-                  {section}
-                </span>
-              </label>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <div className='flex items-center justify-center fixed right-0 top-0 h-screen w-screen translate-x-full transform bg-neutral shadow-xl transition duration-700 ease-in-out peer-checked:translate-x-0 md:w-1/4'>
+        <nav>
+          <ul className='relative z-10 space-y-16 text-center text-4xl font-semibold text-base-100'>
+            {sections.map((section, i) => (
+              <li key={section}>
+                <label
+                  id={`nav-${section}`}
+                  htmlFor='nav'
+                  className='nav-link group/li cursor-pointer select-none gap-2 transition-all hover:text-base-200'
+                >
+                  <span className='byline block text-xl text-accent'>
+                    .0{i + 1}
+                  </span>
+                  <span className='relative inline-block w-fit capitalize after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transform after:bg-base-100 after:transition-all after:content-[""] group-hover/li:after:scale-x-100'>
+                    {section}
+                  </span>
+                </label>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        <footer className='byline absolute bottom-0 left-0 text-sm h-fit w-full p-6 text-center text-base-100'>
+          Designed & Built by <strong>Yousef Jalali</strong>
+        </footer>
+      </div>
     </div>
   )
 }
