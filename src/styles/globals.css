@@ -15,7 +15,7 @@
   }
 
   .btn {
-    @apply relative inline-block select-none border-4 border-neutral bg-base-100 px-8 py-3 text-base font-bold leading-none text-neutral no-underline transition-all after:absolute after:-bottom-2 after:-right-2 after:-z-10 after:block after:h-[calc(100%+4px)] after:w-[calc(100%+4px)] after:bg-primary after:transition-all hover:cursor-pointer hover:border-primary hover:bg-primary hover:text-primary-content hover:after:bottom-0 hover:after:right-0;
+    @apply relative inline-block select-none border-4 border-neutral bg-base-100 px-8 py-3 text-base font-bold leading-none text-neutral no-underline transition-all after:absolute after:-bottom-2 after:-right-2 after:-z-10 after:block after:h-[calc(100%+4px)] after:w-[calc(100%+4px)] after:bg-primary after:transition-all hover:cursor-pointer hover:border-primary hover:bg-primary hover:text-primary-content hover:after:bottom-0 hover:after:right-0 disabled:after:opacity-0 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-neutral disabled:hover:border-neutral;
   }
 
   .section {
