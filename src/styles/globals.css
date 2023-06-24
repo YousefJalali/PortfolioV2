@@ -21,4 +21,28 @@
   .section {
     @apply relative flex h-full w-full items-center justify-center bg-base-100 p-6 text-4xl md:fixed md:left-0 md:top-0 md:mx-48 md:w-[calc(100%-24rem)] md:overflow-hidden md:p-0;
   }
+
+  .input {
+    @apply w-full border-b py-2 focus:border-primary focus:outline-none active:outline-none;
+  }
+
+  .textarea {
+    @apply w-full border-b;
+  }
+
+  input:-webkit-autofill,
+  input:-webkit-autofill:hover,
+  input:-webkit-autofill:focus,
+  textarea:-webkit-autofill,
+  textarea:-webkit-autofill:hover,
+  textarea:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  select:-webkit-autofill:hover,
+  select:-webkit-autofill:focus {
+    -webkit-text-fill-color: inherit;
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    box-shadow: 0 0 0px 1000px #fff inset;
+    transition: background-color 5000s ease-in-out 0s;
+    color: inherit;
+  }
 }
