@@ -135,9 +135,9 @@ export default function Contact() {
                   htmlFor='message'
                   className='absolute opacity-100 top-0 z-10 origin-[0] -translate-y-6 scale-75 transform duration-300 peer-placeholder-shown:translate-y-0 peer-placeholder-shown:scale-100 peer-focus:left-0 peer-focus:-translate-y-6 peer-focus:scale-75 peer-focus:text-primary peer-focus:opacity-0 bg-base-100'
                 >
-                  <span className='opacity-80'>
-                    Hi, I think we need a website for our Company X. How soon
-                    can you hop on to discuss this?
+                  <span className='opacity-80 select-none'>
+                    Hi, I think we need a website for our Company. How soon can
+                    you hop on to discuss this?
                   </span>
                 </label>
               )}
