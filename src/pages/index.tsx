@@ -1,15 +1,19 @@
-import { gsap } from 'gsap'
 import { useLayoutEffect, useRef } from 'react'
+import { Fira_Code, Inter } from 'next/font/google'
+import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/dist/ScrollTrigger'
-import About from '@/components/about/About'
-import Home from '@/components/home/Home'
-import { useMedia } from '@/libs/hooks'
-import Contact from '@/components/contact/Contact'
-import { projectsData } from '@/data'
-import ProjectDescription from '@/components/projects/ProjectDescription'
-import Image from 'next/image'
+import { sections, sectionsWithProjects, projectsData } from '@/constants'
 import Header from '@/components/layout/Header'
-import { sections, sectionsWithProjects } from '@/utils'
+import Home from '@/components/pages/Home'
+import About from '@/components/pages/About'
+import Projects from '@/components/pages/Projects'
+import Contact from '@/components/pages/Contact'
+import { useMedia } from '@/hooks'
+import ScrollIndicator from '@/components/ScrollIndicator'
+import PageNumber from '@/components/PageNumber'
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira' })
 
 const EASE = { duration: 1, ease: 'power2.inOut' }
 
@@ -209,34 +213,15 @@ const App = () => {
   }, [isMobile])
 
   return (
-    <main ref={app} className='relative h-screen'>
+    <main
+      ref={app}
+      className={`relative h-screen ${inter.variable} ${firaCode.variable} font-sans`}
+    >
       <Header />
 
-      <div className='z-100 fixed right-12 top-1/2 hidden -translate-y-1/2 transform space-y-6 md:block'>
-        {sectionsWithProjects.map((sec, i) => (
-          <div
-            id={`section_${i}`}
-            key={sec}
-            className={`pagination h-[8px] w-[8px] cursor-pointer border-4 border-neutral hover:border-primary`}
-          />
-        ))}
-      </div>
+      <ScrollIndicator />
 
-      <div className='fixed bottom-12 right-12 hidden md:block'>
-        <div className='absolute bottom-0 right-0 flex h-[48px] overflow-hidden font-mono text-[48px] font-bold leading-none md:h-[96px] md:text-[96px]'>
-          <span className='relative flex items-center'>
-            <span>0</span>
-            <span className='opacity-0'>0</span>
-            <span className='page-number absolute right-0 top-0'>
-              {sectionsWithProjects.map((sec, i) => (
-                <span key={sec} className='block h-full w-full bg-base-100'>
-                  {i + 1}
-                </span>
-              ))}
-            </span>
-          </span>
-        </div>
-      </div>
+      <PageNumber />
 
       <section id='home' className='section z-10'>
         <Home />
@@ -246,51 +231,12 @@ const App = () => {
         <About />
       </section>
 
-      <div
+      <section
         id='projects'
         className='relative z-[9] w-full bg-base-100 md:mx-48 md:h-screen md:w-[calc(100vw-24rem)] md:overflow-hidden'
       >
-        <div className='prose prose-sm mt-24 max-w-none px-6 md:prose-base md:mt-0 md:hidden'>
-          <span className='byline'>Projects</span>
-          <h1>My Digital Creations</h1>
-        </div>
-
-        {/* IMAGES */}
-        <div className='sticky top-[calc(70vh/4)] hidden h-[70vh] w-[60%] overflow-hidden md:block'>
-          <div className='prose prose-base absolute top-0 max-w-none'>
-            <span className='byline'>Projects</span>
-            <h1>My Digital Creations</h1>
-          </div>
-
-          {projectsData.map((project, i) => (
-            <div
-              key={project.title}
-              className={`absolute top-[6rem] h-[calc(100%-6rem)] w-full bg-base-200 px-4 image${i}`}
-            >
-              <Image
-                src={project.img}
-                alt={project.title}
-                width={1180}
-                height={818}
-                className='h-full w-full object-contain'
-              />
-            </div>
-          ))}
-        </div>
-
-        {/* DESCRIPTION */}
-        {projectsData.map((project, i) => (
-          <section
-            id={`project${i}`}
-            key={project.title}
-            className={`project${i} section mx-0 flex h-fit w-full items-center overflow-visible bg-transparent md:left-auto md:right-48 md:h-screen md:w-[30%]`}
-          >
-            <div className='flex h-1/2 w-full flex-col justify-center md:w-full'>
-              <ProjectDescription project={project} />
-            </div>
-          </section>
-        ))}
-      </div>
+        <Projects />
+      </section>
 
       <section id='contact' className='section'>
         <Contact />

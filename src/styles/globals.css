@@ -5,26 +5,20 @@
 @layer base {
   html,
   body {
-    @apply text-neutral selection:bg-primary selection:text-primary-content caret-primary;
-    /* @apply md:snap-y md:snap-mandatory text-neutral scroll-smooth selection:bg-primary selection:text-primary-content caret-primary; */
+    @apply text-neutral caret-primary selection:bg-primary selection:text-primary-content;
   }
 }
 
 @layer components {
   .byline {
-    @apply font-mono text-primary text-sm md:text-base;
+    @apply font-mono text-sm text-primary md:text-base;
   }
 
   .btn {
-    @apply inline-block relative hover:bg-primary hover:border-primary hover:text-primary-content hover:after:bottom-0 hover:after:right-0 after:block after:absolute after:w-[calc(100%+4px)] after:h-[calc(100%+4px)] after:-bottom-2 after:-right-2 after:-z-10 after:bg-primary no-underline bg-base-100 font-bold text-neutral px-8 py-3 border-4 border-neutral after:transition-all transition-all hover:cursor-pointer select-none text-base leading-none;
+    @apply relative inline-block select-none border-4 border-neutral bg-base-100 px-8 py-3 text-base font-bold leading-none text-neutral no-underline transition-all after:absolute after:-bottom-2 after:-right-2 after:-z-10 after:block after:h-[calc(100%+4px)] after:w-[calc(100%+4px)] after:bg-primary after:transition-all hover:cursor-pointer hover:border-primary hover:bg-primary hover:text-primary-content hover:after:bottom-0 hover:after:right-0;
   }
-  /* .btn {
-    @apply relative hover:before:top-0 hover:before:left-0 before:block before:absolute before:w-[calc(100%+4px)] before:h-[calc(100%+4px)] before:-top-2 before:-left-2 before:-z-10 before:bg-primary no-underline bg-transparent font-bold text-primary-content px-8 py-3 border-4 border-neutral before:transition-all transition-all hover:scale-90 hover:cursor-pointer select-none text-base leading-none;
-  } */
 
   .section {
-    /* @apply mx-auto max-w-7xl flex flex-col justify-center px-6 md:px-24 min-h-screen; */
-    /* @apply mx-auto max-w-7xl lg:px-20 snap-center snap-always my-16 md:my-20; */
-    @apply relative bg-base-100 flex justify-center items-center text-4xl p-6 md:p-0 md:fixed h-full w-full md:left-0 md:top-0 md:w-[calc(100%-24rem)] md:overflow-hidden md:mx-48;
+    @apply relative flex h-full w-full items-center justify-center bg-base-100 p-6 text-4xl md:fixed md:left-0 md:top-0 md:mx-48 md:w-[calc(100%-24rem)] md:overflow-hidden md:p-0;
   }
 }

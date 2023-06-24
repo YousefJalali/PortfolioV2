@@ -1,4 +1,4 @@
-import { ProjectType } from '@/data'
+import { ProjectType } from '@/constants'
 import Image from 'next/image'
 
 export default function ProjectDescription({
@@ -9,25 +9,25 @@ export default function ProjectDescription({
   return (
     <article
       key={project.title}
-      className='mb-12 md:mb-0 w-full z-20 bg-base-200 md:bg-transparent'
+      className='z-20 mb-12 w-full bg-base-200 md:mb-0 md:bg-transparent'
     >
       <Image
         src={project.img}
         alt={project.title}
         width={1180}
         height={818}
-        className='px-4 w-full max-w-md object-contain md:hidden mx-auto bg-base-300'
+        className='mx-auto w-full max-w-md bg-base-300 object-contain px-4 md:hidden'
       />
-      <div className='p-4 md:p-0 prose prose-sm max-w-none md:prose-md flex flex-col md:text-right md:justify-end md:items-end'>
+      <div className='md:prose-md prose prose-sm flex max-w-none flex-col p-4 md:items-end md:justify-end md:p-0 md:text-right'>
         <span className='byline text-xs'>{project.usedTechs}</span>
 
         <h1 className='mb-0'>{project.title}</h1>
-        <p className='my-4 bg-base-200 md:shadow-md md:p-6 md:w-[120%]'>
+        <p className='my-4 bg-base-200 md:w-[120%] md:p-6 md:shadow-md'>
           {project.description}
         </p>
 
         {/* links */}
-        <div className='mt-4 [&>a>svg]:h-5 [&>a]:text-neutral flex md:justify-end gap-4 hover:[&>a>svg]:stroke-primary [&>a>svg]:hover:cursor-pointer transition-all'>
+        <div className='mt-4 flex gap-4 transition-all md:justify-end [&>a>svg]:h-5 [&>a>svg]:hover:cursor-pointer hover:[&>a>svg]:stroke-primary [&>a]:text-neutral'>
           <a
             href={project.links.github}
             target='_blank'

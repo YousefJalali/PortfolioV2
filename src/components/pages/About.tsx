@@ -1,5 +1,4 @@
-import Technologies from '../technologies/Technologies'
-// import profilePic from '../../assets/profile.jpeg'
+import Technologies from '../Technologies'
 import Image from 'next/image'
 
 export default function About() {
@@ -34,15 +33,26 @@ export default function About() {
           <Technologies />
         </div>
 
-        <div className='relative hidden w-1/3 md:block'>
-          <img
-            src='https://placehold.co/800x1200'
-            alt='profile'
-            className='relative z-10 h-full object-cover'
-            width={800}
-            height={1200}
-          />
-          <div className='absolute -left-4 -top-4 z-10 h-full w-full border-4 border-neutral' />
+        <div className='group relative hidden w-1/3 md:block'>
+          <div className='h-full w-full overflow-hidden'>
+            {/* <Image
+              src='/profile.jpeg'
+              alt='profile'
+              className='relative z-10 h-full object-cover transition duration-200 ease-in-out group-hover:scale-110'
+              width={1600}
+              height={1069}
+            /> */}
+
+            <img
+              src='https://placehold.co/800x1200'
+              alt='profile'
+              className='relative z-10 h-full object-cover transition duration-200 ease-in-out group-hover:scale-110'
+              width={800}
+              height={1200}
+            />
+          </div>
+
+          <div className='absolute -left-2 -top-2 z-10 h-full w-full border-4 border-neutral transition-all duration-200 ease-in-out group-hover:left-0 group-hover:top-0' />
         </div>
       </div>
     </div>

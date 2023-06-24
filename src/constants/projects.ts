@@ -1,7 +1,3 @@
-// import vrbtm from '../assets/VRBTM.png'
-// import planner from '../assets/the_planner.png'
-// import weatherApp from '../assets/WeatherApp.png'
-
 export const projectsData = [
   {
     status: 'Featured Project',

@@ -1,4 +1,4 @@
-const paths = [
+export const paths = [
   {
     name: 'React',
     color: '#61dafb',
