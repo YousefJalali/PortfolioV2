@@ -30,6 +30,7 @@ const App = () => {
       nullTargetWarn: false,
     })
 
+    let slideUp: HTMLElement[] = gsap.utils.toArray('.slide-up')
     let pagination: HTMLElement[] = gsap.utils.toArray('.pagination')
     let navLinks: HTMLElement[] = gsap.utils.toArray('.nav-link')
     let currentIndex = 0
@@ -38,15 +39,70 @@ const App = () => {
     let ctx = gsap.context((context) => {
       let sections: HTMLElement[] = gsap.utils.toArray('.section')
 
-      //initializations
-      projectsData.forEach((p, i) => {
-        gsap.set(`.project${i}`, { yPercent: 100 })
-        gsap.set(`.image${i}`, { xPercent: 100 })
+      //initializations--------------------------
+      //header
+      gsap.from('.slide-down', {
+        yPercent: -200,
+        ease: 'Power.easeInOut',
+        opacity: 0,
+        duration: 0.6,
+        stagger: 0.3,
       })
+
+      //pagination
       gsap.set(pagination[0], {
         transform: 'rotate(45deg) scale(1.5)',
         borderWidth: 1,
       })
+      pagination.forEach((ele, i) => {
+        gsap
+          .timeline({
+            defaults: EASE,
+            delay: 0.5,
+          })
+          .add('pagination_anim')
+          .from(
+            ele,
+            {
+              x: 24,
+              ease: 'Power2.easeOut',
+              opacity: 0,
+              duration: 0.1,
+              stagger: 0.3,
+            },
+            `pagination_anime+=${i / 24}`
+          )
+      })
+
+      //page number
+      gsap.from('.page-number-container', { x: 200, opacity: 0, delay: 0.8 })
+
+      //home
+      slideUp.forEach((ele, i) => {
+        gsap
+          .timeline({
+            defaults: EASE,
+            delay: 1.1,
+          })
+          .add('home_anim')
+          .from(
+            ele,
+            {
+              yPercent: 24,
+              ease: 'Power.easeInOut',
+              opacity: 0,
+              duration: 0.6,
+              stagger: 0.3,
+            },
+            `home_anime+=${i / 9}`
+          )
+      })
+
+      projectsData.forEach((p, i) => {
+        gsap.set(`.project${i}`, { yPercent: 100 })
+        gsap.set(`.image${i}`, { xPercent: 100 })
+      })
+      //---------------------------
 
       function animateProjects(index: number, direction: number) {
         let currentImgIndex = sections[currentIndex].id.replace('project', '')

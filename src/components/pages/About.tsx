@@ -33,7 +33,7 @@ export default function About() {
           <Technologies />
         </div>
 
-        <div className='group relative hidden w-1/3 md:block'>
+        <div className='group relative hidden w-1/3 lg:block'>
           <div className='h-full w-full overflow-hidden'>
             {/* <Image
               src='/profile.jpeg'

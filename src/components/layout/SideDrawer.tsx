@@ -20,7 +20,7 @@ export default function SideDrawer() {
         <span className='block h-[2px] w-8 translate-x-[0.75rem] transform bg-neutral' />
       </label>
 
-      <div className='flex items-center justify-center fixed right-0 top-0 h-screen w-screen translate-x-full transform bg-neutral shadow-xl transition duration-700 ease-in-out peer-checked:translate-x-0 md:w-1/4'>
+      <div className='flex items-center justify-center fixed right-0 top-0 h-screen w-screen translate-x-full transform bg-neutral shadow-xl transition duration-700 ease-in-out peer-checked:translate-x-0 md:w-1/3'>
         <nav>
           <ul className='relative z-10 space-y-16 text-center text-4xl font-semibold text-base-100'>
             {sections.map((section, i) => (

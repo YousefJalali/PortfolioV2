@@ -45,7 +45,8 @@ export default function Contact() {
         <>
           <h1 className='mb-1'>Get In Touch</h1>
           <p>
-            Got a question or proposal, or just want to say hello? Go ahead.
+            Got something on your mind? Question, proposal, or just a friendly
+            hello? Shoot!
           </p>
         </>
       )}
@@ -151,7 +152,7 @@ export default function Contact() {
             </div>
 
             <button type='submit' className='btn' disabled={loading}>
-              Send{loading ? 'ing...' : ''}
+              Shoot{loading ? 'ing...' : ''}
             </button>
           </fieldset>
         </form>

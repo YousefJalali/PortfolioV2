@@ -11,7 +11,7 @@ const Projects = () => {
       </div>
 
       {/* IMAGES */}
-      <div className='sticky top-[calc(70vh/4)] hidden h-[70vh] w-[60%] overflow-hidden md:block'>
+      <div className='sticky top-[calc(70vh/4)] hidden h-[70vh] w-[60%] overflow-hidden lg:block'>
         <div className='prose prose-base absolute top-0 max-w-none'>
           <span className='byline'>Projects</span>
           <h1>My Digital Creations</h1>
