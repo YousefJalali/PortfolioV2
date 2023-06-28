@@ -23,7 +23,13 @@
   }
 
   .input {
-    @apply w-full border-b py-2 focus:border-primary focus:outline-none active:outline-none;
+    @apply w-full border-b py-2 focus:border-primary focus:outline-none active:outline-none rounded-none;
+  }
+
+  input,
+  textarea {
+    -webkit-appearance: none;
+    border-radius: 0;
   }
 
   .textarea {

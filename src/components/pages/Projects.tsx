@@ -5,7 +5,7 @@ import Image from 'next/image'
 const Projects = () => {
   return (
     <>
-      <div className='prose prose-sm mt-24 max-w-none px-6 md:prose-base md:mt-0 md:hidden'>
+      <div className='prose prose-sm mt-24 pt-10 max-w-none px-6 md:prose-base md:mt-0 md:pt-0 md:hidden'>
         <span className='byline'>Projects</span>
         <h1>My Digital Creations</h1>
       </div>
