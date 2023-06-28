@@ -1,22 +1,8 @@
 import { sections } from '@/constants'
-import { useMedia } from '@/hooks'
-import { useRouter } from 'next/router'
-
-import { useEffect, useRef } from 'react'
+import { useRef } from 'react'
 
 export default function SideDrawer() {
-  const isMobile = useMedia('(max-width: 768px)')
   const ref = useRef<HTMLLabelElement>(null)
-  const router = useRouter()
-
-  // useEffect(() => {
-  //   if (router.isReady) {
-  //     console.log(isMobile)
-  //     if (!isMobile) {
-  //       window.history.replaceState({}, document.title, '.')
-  //     }
-  //   }
-  // }, [isMobile, router])
 
   return (
     <div className='relative'>
@@ -52,17 +38,12 @@ export default function SideDrawer() {
                     .0{i + 1}
                   </span>
                   <span className='relative inline-block w-fit capitalize after:absolute after:-bottom-2 after:left-0 after:h-1 after:w-full after:scale-x-0 after:transform after:bg-base-100 after:transition-all after:content-[""] group-hover/li:after:scale-x-100'>
-                    {section}
-                    {/* {isMobile ? (
-                      <a
-                        href={`#${section}`}
-                        onClick={() => ref.current?.click()}
-                      >
-                        {section}
-                      </a>
-                    ) : (
-                      section
-                    )} */}
+                    <a
+                      href={`#${section}`}
+                      onClick={() => ref.current?.click()}
+                    >
+                      {section}
+                    </a>
                   </span>
                 </label>
               </li>

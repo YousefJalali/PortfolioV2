@@ -6,7 +6,7 @@ export default function About() {
   // const age = Math.floor(diff / (1000 * 60 * 60 * 24 * 365.25))
 
   return (
-    <div className='items-center md:flex-row md:justify-center'>
+    <div className='md:items-center md:flex-row md:justify-center'>
       <div className='flex h-fit gap-12 md:items-center lg:gap-24 xl:gap-32'>
         <div className='flex-1 overflow-hidden'>
           <div className='prose prose-sm max-w-none md:prose-base'>
