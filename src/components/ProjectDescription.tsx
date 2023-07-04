@@ -9,25 +9,25 @@ export default function ProjectDescription({
   return (
     <article
       key={project.title}
-      className='z-20 mb-12 w-full bg-base-200 md:mb-0 md:bg-transparent'
+      className='z-20 mb-12 w-full bg-base-100 md:mb-0 md:bg-transparent'
     >
       <Image
         src={project.img}
         alt={project.title}
         width={1180}
         height={818}
-        className='mx-auto object-cover w-full max-w-md bg-base-200 px-4 md:hidden'
+        className='mx-auto object-cover w-full max-w-md bg-base-200 md:hidden mb-4 md:mb-0'
       />
-      <div className='md:prose-md prose prose-sm flex max-w-none flex-col p-4 md:items-end md:justify-end md:p-0 md:text-right'>
+      <div className='md:prose-md prose prose-sm flex max-w-none flex-col md:items-end md:justify-end md:text-right'>
         <span className='byline text-xs'>{project.usedTechs}</span>
 
         <h1 className='mb-0'>{project.title}</h1>
-        <p className='my-4 bg-base-200 md:w-[120%] md:p-6 md:shadow-lg'>
+        <p className='md:bg-base-200 md:w-[120%] md:p-6 md:shadow-lg'>
           {project.description}
         </p>
 
         {/* links */}
-        <div className='mt-4 flex gap-4 transition-all md:justify-end [&>a>svg]:h-5 [&>a>svg]:hover:cursor-pointer hover:[&>a>svg]:stroke-primary [&>a]:text-neutral'>
+        <div className='flex gap-4 transition-all md:justify-end [&>a>svg]:h-5 [&>a>svg]:hover:cursor-pointer hover:[&>a>svg]:stroke-primary [&>a]:text-neutral'>
           <a
             href={project.links.github}
             target='_blank'
