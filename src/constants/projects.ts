@@ -16,7 +16,7 @@ export const projectsData = [
     title: 'Binder',
     description:
       "This app lets you create tasks, assign them to projects, set due dates, prioritize your work, and organize them into categories. You'll receive notifications and reminders, and can mark tasks as completed. It's accessible on multiple devices for managing your tasks and projects from anywhere.",
-    img: '/the_planner.png',
+    img: '/binder.png',
     usedTechs: 'Nx, Next.js, Styled-Components & MongoDB',
     links: {
       github: 'https://github.com/YousefJalali/the-planner',
