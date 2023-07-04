@@ -18,8 +18,12 @@
     @apply relative inline-block select-none border-4 border-neutral bg-base-100 px-8 py-3 text-base font-bold leading-none text-neutral no-underline transition-all after:absolute after:-bottom-2 after:-right-2 after:-z-10 after:block after:h-[calc(100%+4px)] after:w-[calc(100%+4px)] after:bg-primary after:transition-all hover:cursor-pointer hover:border-primary hover:bg-primary hover:text-primary-content hover:after:bottom-0 hover:after:right-0 disabled:after:opacity-0 disabled:cursor-not-allowed disabled:hover:bg-transparent disabled:hover:text-neutral disabled:hover:border-neutral;
   }
 
+  .container {
+    @apply max-w-2xl md:max-w-none mx-auto md:mx-24 md:w-[calc(100%-12rem)] lg:mx-48 lg:w-[calc(100%-24rem)];
+  }
+
   .section {
-    @apply relative flex h-full w-full items-center justify-center bg-base-100 p-6 text-4xl md:fixed md:left-0 md:top-0 md:mx-48 md:w-[calc(100%-24rem)] md:overflow-hidden md:p-0;
+    @apply relative flex md:h-full md:items-center md:justify-center bg-base-100 p-8 md:fixed md:left-0 md:top-0 md:overflow-hidden md:p-0;
   }
 
   .input {

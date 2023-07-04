@@ -14,6 +14,8 @@ import Projects from '@/components/pages/Projects'
 import Contact from '@/components/pages/Contact'
 import ScrollIndicator from '@/components/ScrollIndicator'
 import PageNumber from '@/components/PageNumber'
+import Footer from '@/components/layout/Footer'
+import Head from 'next/head'
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
 const firaCode = Fira_Code({ subsets: ['latin'], variable: '--font-fira' })
@@ -39,7 +41,7 @@ const App = () => {
 
     let mm = gsap.matchMedia()
 
-    mm.add('(min-width: 800px)', () => {
+    mm.add('(min-width: 840px)', () => {
       //remove hash from url
       removeHash()
 
@@ -289,35 +291,45 @@ const App = () => {
   }, [])
 
   return (
-    <main
-      ref={app}
-      className={`relative h-screen ${inter.variable} ${firaCode.variable} font-sans`}
-    >
-      <Header />
-
-      <ScrollIndicator />
-
-      <PageNumber />
-
-      <section id='home' className='section z-10'>
-        <Home />
-      </section>
-
-      <section id='about' className='section'>
-        <About />
-      </section>
-
-      <section
-        id='projects'
-        className='relative z-[9] w-full bg-base-100 md:mx-48 md:h-screen md:w-[calc(100vw-24rem)] md:overflow-hidden'
+    <>
+      <main
+        ref={app}
+        className={`relative h-screen ${inter.variable} ${firaCode.variable} font-sans`}
       >
-        <Projects />
-      </section>
+        <Header />
 
-      <section id='contact' className='section'>
-        <Contact />
-      </section>
-    </main>
+        <ScrollIndicator />
+
+        <PageNumber />
+
+        <section
+          id='home'
+          className='container section z-10 h-screen items-center'
+        >
+          <Home />
+        </section>
+
+        <section id='about' className='container section'>
+          <About />
+        </section>
+
+        <section
+          id='projects'
+          className='container relative z-[9] bg-base-100 md:h-screen md:overflow-hidden'
+        >
+          <Projects />
+        </section>
+
+        <section
+          id='contact'
+          className='container section h-screen items-center'
+        >
+          <Contact />
+        </section>
+
+        <Footer className='md:hidden' />
+      </main>
+    </>
   )
 }
 export default App

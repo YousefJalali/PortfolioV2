@@ -16,13 +16,13 @@ export default function ProjectDescription({
         alt={project.title}
         width={1180}
         height={818}
-        className='mx-auto w-full max-w-md bg-base-300 object-contain px-4 md:hidden'
+        className='mx-auto object-cover w-full max-w-md bg-base-200 px-4 md:hidden'
       />
       <div className='md:prose-md prose prose-sm flex max-w-none flex-col p-4 md:items-end md:justify-end md:p-0 md:text-right'>
         <span className='byline text-xs'>{project.usedTechs}</span>
 
         <h1 className='mb-0'>{project.title}</h1>
-        <p className='my-4 bg-base-200 md:w-[120%] md:p-6 md:shadow-md'>
+        <p className='my-4 bg-base-200 md:w-[120%] md:p-6 md:shadow-lg'>
           {project.description}
         </p>
 

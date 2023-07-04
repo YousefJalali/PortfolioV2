@@ -11,7 +11,7 @@ const Projects = () => {
       </div>
 
       {/* IMAGES */}
-      <div className='sticky top-[calc(70vh/4)] hidden h-[70vh] w-[60%] overflow-hidden lg:block'>
+      <div className='sticky top-[calc(70vh/4)] hidden h-[70vh] w-[66%] overflow-hidden md:block'>
         <div className='prose prose-base absolute top-0 max-w-none'>
           <span className='byline'>Projects</span>
           <h1>My Digital Creations</h1>
@@ -38,7 +38,7 @@ const Projects = () => {
         <section
           id={`project${i}`}
           key={project.title}
-          className={`project${i} section mx-0 flex h-fit w-full items-center overflow-visible bg-transparent md:left-auto md:right-48 md:h-screen md:w-[30%]`}
+          className={`project${i} section mx-0 flex h-fit w-full items-center overflow-visible bg-transparent md:left-auto md:right-24 lg:right-48 md:h-screen md:w-[30%]`}
         >
           <div className='flex h-1/2 w-full flex-col justify-center md:w-full'>
             <ProjectDescription project={project} />

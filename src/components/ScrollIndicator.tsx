@@ -2,7 +2,7 @@ import { sectionsWithProjects } from '@/constants'
 
 const ScrollIndicator = () => {
   return (
-    <div className='z-100 fixed right-12 top-1/2 hidden -translate-y-1/2 transform space-y-6 md:block'>
+    <div className='z-[200] fixed right-12 top-1/2 hidden -translate-y-1/2 transform space-y-6 md:block'>
       {sectionsWithProjects.map((sec, i) => (
         <div
           id={`section_${i}`}

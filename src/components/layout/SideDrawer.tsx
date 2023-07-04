@@ -1,5 +1,6 @@
 import { sections } from '@/constants'
 import { useRef } from 'react'
+import Footer from './Footer'
 
 export default function SideDrawer() {
   const ref = useRef<HTMLLabelElement>(null)
@@ -18,7 +19,7 @@ export default function SideDrawer() {
       <label
         ref={ref}
         htmlFor='nav'
-        className='relative z-[2000] flex cursor-pointer py-3 flex-col items-end overflow-hidden peer-checked:fixed peer-checked:right-6 peer-checked:top-6 md:peer-checked:relative md:peer-checked:right-0 md:peer-checked:top-0 peer-checked:[&>*:first-child]:translate-y-[calc(0.75rem/2+1px)] peer-checked:[&>*:first-child]:rotate-45 [&>*:last-child]:hover:translate-x-0 peer-checked:[&>*:last-child]:-translate-y-[calc(0.75rem/2+1px)]  peer-checked:[&>*:last-child]:translate-x-0 peer-checked:[&>*:last-child]:-rotate-45 [&>span]:transition [&>span]:duration-300 [&>span]:ease-in-out peer-checked:[&>span]:bg-base-100'
+        className='relative z-[2000] flex cursor-pointer py-3 flex-col items-end overflow-hidden peer-checked:fixed peer-checked:right-8 peer-checked:top-6 md:peer-checked:relative md:peer-checked:right-0 md:peer-checked:top-0 peer-checked:[&>*:first-child]:translate-y-[calc(0.75rem/2+1px)] peer-checked:[&>*:first-child]:rotate-45 [&>*:last-child]:hover:translate-x-0 peer-checked:[&>*:last-child]:-translate-y-[calc(0.75rem/2+1px)]  peer-checked:[&>*:last-child]:translate-x-0 peer-checked:[&>*:last-child]:-rotate-45 [&>span]:transition [&>span]:duration-300 [&>span]:ease-in-out peer-checked:[&>span]:bg-base-100'
       >
         <span className='mb-3 block h-[2px] w-8 bg-neutral' />
         <span className='block h-[2px] w-8 translate-x-[0.75rem] transform bg-neutral' />
@@ -51,9 +52,7 @@ export default function SideDrawer() {
           </ul>
         </nav>
 
-        <footer className='byline absolute bottom-0 left-0 text-sm h-fit w-full p-6 text-center text-base-100'>
-          Designed & Built by <strong>Yousef Jalali</strong>
-        </footer>
+        <Footer className='absolute bottom-0 left-0 hidden md:flex' />
       </div>
     </div>
   )
