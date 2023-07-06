@@ -1,18 +1,6 @@
 export const projectsData = [
   {
     status: 'Featured Project',
-    title: 'VRBTM',
-    description:
-      'Introducing a web app to improve memory retention. Easily memorize text by omitting words manually or randomly. Create personal notebooks and modify them. Save flashcards based on your notes and more.',
-    img: '/VRBTM.png',
-    usedTechs: 'Next.js, Tailwind & MongoDB',
-    links: {
-      github: 'https://github.com/YousefJalali/vrbtm',
-      appLink: 'https://vrbtm.vercel.app',
-    },
-  },
-  {
-    status: 'Featured Project',
     title: 'Binder',
     description:
       "This app lets you create tasks, assign them to projects, set due dates, prioritize your work, and organize them into categories. You'll receive notifications and reminders, and can mark tasks as completed. It's accessible on multiple devices for managing your tasks and projects from anywhere.",
@@ -21,6 +9,18 @@ export const projectsData = [
     links: {
       github: 'https://github.com/YousefJalali/the-planner',
       appLink: 'https://the-planner-monorepo.vercel.app/',
+    },
+  },
+  {
+    status: 'Featured Project',
+    title: 'VRBTM',
+    description:
+      'Introducing a web app to improve memory retention. Easily memorize text by omitting words manually or randomly. Create personal notebooks and modify them. Save flashcards based on your notes and more.',
+    img: '/VRBTM.png',
+    usedTechs: 'Next.js, Tailwind & MongoDB',
+    links: {
+      github: 'https://github.com/YousefJalali/vrbtm',
+      appLink: 'https://vrbtm.vercel.app',
     },
   },
   {
@@ -43,8 +43,9 @@ export const projectsData = [
     img: '/Minesweeper.png',
     usedTechs: 'Expo, Redux & Styled-Components',
     links: {
-      github: 'https://github.com/YousefJalali/weather-app',
-      appLink: 'https://weather-app-beta-eight-11.vercel.app/',
+      github: 'https://github.com/YousefJalali/minesweeper',
+      appLink:
+        'https://expo.dev/@jbygoal/minesweeper-app?serviceType=classic&distribution=expo-go',
     },
   },
   {
@@ -55,8 +56,9 @@ export const projectsData = [
     img: '/SkullWallpapers.png',
     usedTechs: 'Expo, Redux, Firebase & Styled-Components',
     links: {
-      github: 'https://github.com/YousefJalali/weather-app',
-      appLink: 'https://weather-app-beta-eight-11.vercel.app/',
+      github: 'https://github.com/YousefJalali/RN-wallpapers',
+      appLink:
+        'https://expo.dev/@jbygoal/skull-wallpaper?serviceType=classic&distribution=expo-go',
     },
   },
 ]
