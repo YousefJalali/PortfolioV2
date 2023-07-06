@@ -21,7 +21,7 @@ export default function ProjectDescription({
       <div className='md:prose-md prose prose-sm flex max-w-none flex-col md:items-end md:justify-end md:text-right'>
         <span className='byline text-xs'>{project.usedTechs}</span>
 
-        <h1 className='mb-0'>{project.title}</h1>
+        <h1 className='mb-0 mt-1'>{project.title}</h1>
         <p className='md:bg-base-200 md:w-[120%] md:p-6 md:shadow-lg'>
           {project.description}
         </p>
