@@ -25,7 +25,7 @@ export const projectsData = [
   },
   {
     status: 'Featured Project',
-    title: 'Weather App',
+    title: 'WeatherNow',
     description:
       'A simple weather app built using Next.js experimental app folder feature would allow users to enter a location and retrieve current weather data. It displays temperature, weather condition, and offer additional features such as saving favorite locations and viewing forecasts. The design is simple and user-friendly.',
     img: '/WeatherApp.png',
