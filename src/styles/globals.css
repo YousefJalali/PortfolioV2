@@ -36,6 +36,10 @@
     border-radius: 0;
   }
 
+  a {
+    cursor: pointer;
+  }
+
   .textarea {
     @apply w-full border-b;
   }

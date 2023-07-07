@@ -27,6 +27,14 @@ export default function About() {
               and challenges that can help me reach my goal.
             </p>
             <p>
+              To get a closer look at my skills and experience, feel free to
+              check out{' '}
+              <a href='/resume.pdf' target='_blank' rel='noopener noreferrer'>
+                my resume
+              </a>
+              .
+            </p>
+            <p>
               Lately, I’ve been experimenting with some awesome technologies:
             </p>
           </div>
